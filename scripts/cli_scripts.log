@@ -1,0 +1,842 @@
+2016-12-26 16:56:13: 'result': 'f'
+2016-12-26 16:56:13: Check buzzer Invalid Options fail
+2016-12-26 16:56:13: Verify Buzzer Invalid Actions: 
+2016-12-26 16:56:13: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:56:07: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:56:01: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:55:55: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:53:34: Verify Buzzer Invalid Options: 
+2016-12-26 16:53:34: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:53:27: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:53:21: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:53:16: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:52:19: Verify Buzzer Invalid Options: 
+2016-12-26 16:52:19: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:52:14: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:52:08: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:52:00: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:51:22: 'result': 'p'
+2016-12-26 16:51:22: Check buzzer Invalid Options pass
+2016-12-26 16:51:15: Verify Buzzer Invalid Options: 
+2016-12-26 16:51:15: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:51:09: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:51:02: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:50:56: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:48:22: 'result': 'p'
+2016-12-26 16:48:22: Check buzzer Invalid Options pass
+2016-12-26 16:47:58: Verify Buzzer Invalid Options: 
+2016-12-26 16:47:58: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:47:51: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:47:45: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:47:39: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:43:24: Verify Buzzer Invalid Options: 
+2016-12-26 16:43:24: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:43:18: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:43:12: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:43:05: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:40:43: Verify Buzzer Invalid Options: 
+2016-12-26 16:40:43: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:40:36: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:40:26: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:40:19: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:37:33: Verify Buzzer Invalid Options: 
+2016-12-26 16:37:33: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:37:27: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:37:21: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:37:15: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:36:10: 'result': 'p'
+2016-12-26 16:36:10: Check buzzer Invalid Options pass
+2016-12-26 16:36:10: Verify Buzzer Invalid Options: 
+2016-12-26 16:36:10: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:36:04: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:35:57: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:35:50: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:25:54: 'result': 'p'
+2016-12-26 16:25:54: Check buzzer Invalid Options pass
+2016-12-26 16:25:54: Verify Buzzer Invalid Options: 
+2016-12-26 16:25:54: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:25:47: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:25:40: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:25:21: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:24:07: 'result': 'p'
+2016-12-26 16:24:07: Check buzzer Invalid Options pass
+2016-12-26 16:24:07: Verify Buzzer Invalid Options: 
+2016-12-26 16:24:07: administrator@cli> buzz -a Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> Error (0x401): Invalid command or request
+ 
+administrator@cli> 
+administrator@cli> 
+2016-12-26 16:24:01: administrator@cli> buzz -a test
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:23:55: administrator@cli> buzz -a 123
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:23:48: administrator@cli> buzz -alista
+Error (0x2010): Invalid action
+ 
+administrator@cli> 
+2016-12-26 16:20:08: 'result': 'p'
+2016-12-26 16:20:08: Verify Buzzer Help pass
+2016-12-26 16:20:08: Verify Buzzer Help: 
+2016-12-26 16:20:08: administrator@cli> buzz -h123
+buzz
+
+Usage:
+   buzz [-a <action>]
+   buzz -a list 
+   buzz -a enable 
+   buzz -a disable 
+   buzz -a on 
+   buzz -a off 
+
+Summary:
+   Buzz is used to view the status of the buzzer(s), and to enable, disable,
+   turn on or turn off the buzzer.
+
+-a <action>          Which action to perform.
+                    
+   list              (Default) List the status of the buzzer(s).
+   enable            Enable the buzzer.
+   disable           Disable the buzzer.
+   on                Turn on the buzzer.
+   off               Turn off the buzzer.
+ 
+Type " | more" at the end of each command, to display info page by page.
+ 
+administrator@cli> 
+2016-12-26 16:20:02: administrator@cli> buzz -h
+buzz
+
+Usage:
+   buzz [-a <action>]
+   buzz -a list 
+   buzz -a enable 
+   buzz -a disable 
+   buzz -a on 
+   buzz -a off 
+
+Summary:
+   Buzz is used to view the status of the buzzer(s), and to enable, disable,
+   turn on or turn off the buzzer.
+
+-a <action>          Which action to perform.
+                    
+   list              (Default) List the status of the buzzer(s).
+   enable            Enable the buzzer.
+   disable           Disable the buzzer.
+   on                Turn on the buzzer.
+   off               Turn off the buzzer.
+ 
+Type " | more" at the end of each command, to display info page by page.
+ 
+administrator@cli> 
+2016-12-26 16:19:56: 'result': 'p'
+2016-12-26 16:19:56: Check buzzer Invalid Parameters pass
+2016-12-26 16:19:56: administrator@cli> buzz 123
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-26 16:19:50: administrator@cli> buzz abc
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-26 16:19:44: Check buzzer Invalid Parameters: 
+2016-12-26 16:15:29: Check buzzer Invalid Parameters: 
+2016-12-26 16:14:19: Check buzzer Invalid Parameters: 
+2016-12-24 18:01:25: 'result': 'p'
+2016-12-24 18:01:25: Check turn on buzzer when it is disabled pass
+2016-12-24 18:01:25: 'result': 'p'
+2016-12-24 18:01:24: Check buzzer info pass
+2016-12-24 18:01:24: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-24 18:01:19: Check buzzer information: 
+2016-12-24 18:01:19: administrator@cli> buzz -a on
+Error (0x49915102): Buzzer is disabled
+ 
+administrator@cli> 
+2016-12-24 18:01:13: Turn on buzzer: 
+2016-12-24 18:01:13: 'result': 'p'
+2016-12-24 18:01:13: Disable buzzer pass
+2016-12-24 18:01:13: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-24 18:01:07: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-24 18:01:01: Disable buzzer: 
+2016-12-24 18:00:33: 'result': 'p'
+2016-12-24 18:00:33: Check buzzer Invalid Parameters pass
+2016-12-24 18:00:33: administrator@cli> buzz 123
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-24 18:00:27: administrator@cli> buzz abc
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-24 18:00:21: Check buzzer Invalid Parameters: 
+2016-12-23 18:46:06: 'result': 'p'
+2016-12-23 18:46:06: Check turn on buzzer when it is disabled pass
+2016-12-23 18:46:06: 'result': 'p'
+2016-12-23 18:46:06: Check buzzer info pass
+2016-12-23 18:46:06: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:46:00: Check buzzer information: 
+2016-12-23 18:46:00: administrator@cli> buzz -a on
+Error (0x49915102): Buzzer is disabled
+ 
+administrator@cli> 
+2016-12-23 18:45:55: Turn on buzzer: 
+2016-12-23 18:45:55: 'result': 'p'
+2016-12-23 18:45:55: Disable buzzer pass
+2016-12-23 18:45:55: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:45:47: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-23 18:45:39: Disable buzzer: 
+2016-12-23 18:38:36: 'result': 'p'
+2016-12-23 18:38:36: Check turn on buzzer when it is disabled pass
+2016-12-23 18:38:36: administrator@cli> buzz -a on
+Error (0x49915102): Buzzer is disabled
+ 
+administrator@cli> 
+2016-12-23 18:38:30: Turn on buzzer: 
+2016-12-23 18:38:30: 'result': 'p'
+2016-12-23 18:38:30: Disable buzzer pass
+2016-12-23 18:38:30: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:38:24: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-23 18:38:19: Disable buzzer: 
+2016-12-23 18:33:27: 'result': 'f'
+2016-12-23 18:33:27: Turn on buzzer fail
+2016-12-23 18:33:26: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:33:21: administrator@cli> buzz -a on
+Error (0x49915102): Buzzer is disabled
+ 
+administrator@cli> 
+2016-12-23 18:33:15: Turn on buzzer: 
+2016-12-23 18:33:15: 'result': 'p'
+2016-12-23 18:33:15: Disable buzzer pass
+2016-12-23 18:33:15: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:33:10: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-23 18:33:04: Disable buzzer: 
+2016-12-23 18:29:56: 'result': 'f'
+2016-12-23 18:29:56: Turn on buzzer fail
+2016-12-23 18:29:56: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:29:50: administrator@cli> buzz -a on
+Error (0x49915102): Buzzer is disabled
+ 
+administrator@cli> 
+2016-12-23 18:29:44: Turn on buzzer: 
+2016-12-23 18:29:44: 'result': 'p'
+2016-12-23 18:29:44: Disable buzzer pass
+2016-12-23 18:29:44: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:29:39: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-23 18:29:33: Disable buzzer: 
+2016-12-23 18:17:36: 'result': 'p'
+2016-12-23 18:17:36: Check buzzer Invalid Parameters pass
+2016-12-23 18:17:36: administrator@cli> buzz 123
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-23 18:17:30: administrator@cli> buzz abc
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-23 18:17:24: Check buzzer Invalid Parameters: 
+2016-12-23 18:14:35: 'result': 'f'
+2016-12-23 18:14:35: Check buzzer Invalid Parameters fail
+2016-12-23 18:14:35: administrator@cli> buzz 123
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-23 18:14:29: administrator@cli> buzz abc
+Error (0x402): Invalid parameter
+ 
+administrator@cli> 
+2016-12-23 18:14:24: Check buzzer Invalid Parameters: 
+2016-12-23 18:14:23: 'result': 'p'
+2016-12-23 18:14:23: Disable buzzer pass
+2016-12-23 18:14:23: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+No        Silent    
+ 
+administrator@cli> 
+2016-12-23 18:14:17: administrator@cli> buzz -a disable
+ 
+administrator@cli> 
+2016-12-23 18:14:10: Disable buzzer: 
+2016-12-23 17:51:20: 'result': 'p'
+2016-12-23 17:51:20: Turn on buzzer pass
+2016-12-23 17:51:20: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Sounding  
+ 
+administrator@cli> 
+2016-12-23 17:51:14: administrator@cli> buzz -a on
+ 
+administrator@cli> 
+2016-12-23 17:51:09: Turn on buzzer: 
+2016-12-23 17:51:08: 'result': 'f'
+2016-12-23 17:51:08: Disable buzzer fail
+2016-12-23 17:51:08: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:51:02: administrator@cli> buzz -a enable
+ 
+administrator@cli> 
+2016-12-23 17:50:57: Disable buzzer: 
+2016-12-23 17:50:57: 'result': 'p'
+2016-12-23 17:50:57: Turn off buzzer pass
+2016-12-23 17:50:56: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:50:51: administrator@cli> buzz -a off
+ 
+administrator@cli> 
+2016-12-23 17:50:45: Turn off buzzer: 
+2016-12-23 17:50:45: 'result': 'p'
+2016-12-23 17:50:45: Turn on buzzer pass
+2016-12-23 17:50:45: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Sounding  
+ 
+administrator@cli> 
+2016-12-23 17:50:39: administrator@cli> buzz -a on
+ 
+administrator@cli> 
+2016-12-23 17:50:33: Turn on buzzer: 
+2016-12-23 17:50:33: 'result': 'p'
+2016-12-23 17:50:33: Enable buzzer pass
+2016-12-23 17:50:33: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:50:27: administrator@cli> buzz -a enable
+ 
+administrator@cli> 
+2016-12-23 17:50:22: Enable buzzer: 
+2016-12-23 17:50:21: 'result': 'p'
+2016-12-23 17:50:21: Check buzzer info pass
+2016-12-23 17:50:21: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:50:15: Check buzzer information: 
+2016-12-23 17:43:37: 'result': 'p'
+2016-12-23 17:43:37: Check buzzer info pass
+2016-12-23 17:43:36: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:43:31: Check buzzer information: 
+2016-12-23 17:43:30: 'result': 'f'
+2016-12-23 17:43:30: 'result': 'f'
+2016-12-23 17:43:30: 'result': 'f'
+2016-12-23 17:43:30: 'result': 'f'
+2016-12-23 17:40:59: 'result': 'f'
+2016-12-23 17:40:59: Check buzzer info pass
+2016-12-23 17:40:59: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:40:53: Check buzzer information: 
+2016-12-23 17:40:52: 'result': 'f'
+2016-12-23 17:40:52: 'result': 'f'
+2016-12-23 17:40:52: 'result': 'f'
+2016-12-23 17:40:52: 'result': 'f'
+2016-12-23 17:39:58: 'result': 'p'
+2016-12-23 17:39:58: Check buzzer info pass
+2016-12-23 17:39:58: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:39:52: Check buzzer information: 
+2016-12-23 17:39:51: 'result': 'f'
+2016-12-23 17:39:51: 'result': 'f'
+2016-12-23 17:39:51: 'result': 'f'
+2016-12-23 17:39:51: 'result': 'f'
+2016-12-23 17:38:38: 'result': 'p'
+2016-12-23 17:38:38: Check buzzer info pass
+2016-12-23 17:38:38: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:38:32: Check buzzer information: 
+2016-12-23 17:38:31: 'result': 'f'
+2016-12-23 17:38:31: 'result': 'f'
+2016-12-23 17:38:31: 'result': 'f'
+2016-12-23 17:38:31: 'result': 'f'
+2016-12-23 17:37:39: 'result': 'p'
+2016-12-23 17:37:39: Check buzzer info pass
+2016-12-23 17:37:39: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:37:34: Check buzzer information: 
+2016-12-23 17:37:29: 'result': 'f'
+2016-12-23 17:37:29: 'result': 'f'
+2016-12-23 17:37:29: 'result': 'f'
+2016-12-23 17:37:29: 'result': 'f'
+2016-12-23 17:34:17: 'result': 'p'
+2016-12-23 17:34:17: Check buzzer info pass
+2016-12-23 17:34:17: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:34:11: Check buzzer information: 
+2016-12-23 17:33:02: 'result': 'f'
+2016-12-23 17:33:02: 'result': 'f'
+2016-12-23 17:33:02: 'result': 'f'
+2016-12-23 17:33:02: 'result': 'f'
+2016-12-23 17:30:15: 'result': 'f'
+2016-12-23 17:30:15: 'result': 'f'
+2016-12-23 17:30:15: 'result': 'f'
+2016-12-23 17:30:15: 'result': 'f'
+2016-12-23 17:29:47: 'result': 'f'
+2016-12-23 17:29:47: 'result': 'f'
+2016-12-23 17:29:47: 'result': 'f'
+2016-12-23 17:29:47: 'result': 'f'
+2016-12-23 17:29:10: 'result': 'f'
+2016-12-23 17:29:10: 'result': 'f'
+2016-12-23 17:29:10: 'result': 'f'
+2016-12-23 17:29:10: 'result': 'f'
+2016-12-23 17:26:16: 'result': 'p'
+2016-12-23 17:26:16: Check buzzer info pass
+2016-12-23 17:26:16: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:26:11: Check buzzer information: 
+2016-12-23 17:26:10: 'result': 'f'
+2016-12-23 17:26:10: 'result': 'f'
+2016-12-23 17:26:10: 'result': 'f'
+2016-12-23 17:26:10: 'result': 'f'
+2016-12-23 17:25:51: 'result': 'f'
+2016-12-23 17:25:51: 'result': 'f'
+2016-12-23 17:25:51: 'result': 'f'
+2016-12-23 17:25:51: 'result': 'f'
+2016-12-23 17:24:04: 'result': 'p'
+2016-12-23 17:24:04: Check buzzer info pass
+2016-12-23 17:24:04: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:23:58: Check buzzer information: 
+2016-12-23 17:23:57: 'result': 'f'
+2016-12-23 17:23:57: 'result': 'f'
+2016-12-23 17:23:57: 'result': 'f'
+2016-12-23 17:23:57: 'result': 'f'
+2016-12-23 17:17:34: 'result': 'p'
+2016-12-23 17:17:34: Check buzzer info pass
+2016-12-23 17:17:34: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:17:29: Check buzzer information: 
+2016-12-23 17:17:27: 'result': 'f'
+2016-12-23 17:17:27: 'result': 'f'
+2016-12-23 17:17:27: 'result': 'f'
+2016-12-23 17:17:27: 'result': 'f'
+2016-12-23 17:16:17: 'result': 'p'
+2016-12-23 17:16:17: Check buzzer info pass
+2016-12-23 17:16:17: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:16:12: Check buzzer information: 
+2016-12-23 17:16:08: 'result': 'f'
+2016-12-23 17:16:08: 'result': 'f'
+2016-12-23 17:16:08: 'result': 'f'
+2016-12-23 17:16:08: 'result': 'f'
+2016-12-23 17:15:55: 'result': 'f'
+2016-12-23 17:15:55: 'result': 'f'
+2016-12-23 17:15:55: 'result': 'f'
+2016-12-23 17:15:55: 'result': 'f'
+2016-12-23 17:14:00: 'result': 'p'
+2016-12-23 17:14:00: Check buzzer info pass
+2016-12-23 17:14:00: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:13:54: Check buzzer information: 
+2016-12-23 17:13:53: 'result': 'f'
+2016-12-23 17:13:53: 'result': 'f'
+2016-12-23 17:13:53: 'result': 'f'
+2016-12-23 17:13:53: 'result': 'f'
+2016-12-23 17:08:49: 'result': 'p'
+2016-12-23 17:08:49: Check buzzer info pass
+2016-12-23 17:08:49: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:08:43: Check buzzer information: 
+2016-12-23 17:08:42: 'result': 'f'
+2016-12-23 17:08:42: 'result': 'f'
+2016-12-23 17:08:42: 'result': 'f'
+2016-12-23 17:08:42: 'result': 'f'
+2016-12-23 17:08:25: 'result': 'f'
+2016-12-23 17:08:25: 'result': 'f'
+2016-12-23 17:08:25: 'result': 'f'
+2016-12-23 17:08:25: 'result': 'f'
+2016-12-23 17:07:25: 'result': 'p'
+2016-12-23 17:07:25: Check buzzer info pass
+2016-12-23 17:07:25: administrator@cli> buzz
+===============================================================================
+Enabled   Status    
+===============================================================================
+Yes       Silent    
+ 
+administrator@cli> 
+2016-12-23 17:07:19: Check buzzer information: 
+2016-12-23 17:07:18: 'result': 'f'
+2016-12-23 17:07:18: 'result': 'f'
+2016-12-23 17:07:18: 'result': 'f'
+2016-12-23 17:07:18: 'result': 'f'
+2016-12-23 17:06:16: 'result': 'f'
+2016-12-23 17:06:16: 'result': 'f'
+2016-12-23 17:06:16: 'result': 'f'
+2016-12-23 17:06:16: 'result': 'f'
