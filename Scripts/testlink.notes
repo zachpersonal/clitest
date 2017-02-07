@@ -1,0 +1,77 @@
+net -m
+ 
+-------------------------------------------------------------------------------
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv4(Enabled)          DHCP: Disabled
+IP: 10.0.0.3
+IPMask: 255.0.0.0
+DNS: 0.0.0.0
+Gateway: 0.0.0.0
+MAC: 00:01:55:59:EA:9D
+ 
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv6(Enabled)          DHCP: Disabled
+IP: 2001::2a
+IPMask: ffff::
+DNS: ::
+Gateway: ::
+MAC: 00:01:55:59:EA:9D
+ 
+ 
+-------------------------------------------------------------------------------
+Controller 2 information not accessible
+ 
+administrator@cli> 
+net -m
+ 
+-------------------------------------------------------------------------------
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv4(Enabled)          DHCP: Disabled
+IP: 10.0.0.3
+IPMask: 255.0.0.0
+DNS: 0.0.0.0
+Gateway: 0.0.0.0
+MAC: 00:01:55:59:EA:9D
+ 
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv6(Enabled)          DHCP: Disabled
+IP: 2001::2a
+IPMask: ffff::
+DNS: ::
+Gateway: ::
+MAC: 00:01:55:59:EA:9D
+ 
+ 
+-------------------------------------------------------------------------------
+Controller 2 information not accessible
+ 
+administrator@cli> 
+net -a mod -m -c 1 -f ipv6 -s "primaryip=2001::1"
+ 
+administrator@cli> 
+net -m
+ 
+-------------------------------------------------------------------------------
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv4(Enabled)          DHCP: Disabled
+IP: 10.0.0.3
+IPMask: 255.0.0.0
+DNS: 0.0.0.0
+Gateway: 0.0.0.0
+MAC: 00:01:55:59:EA:9D
+ 
+CtrlId: 1                              Port: 1
+ProtocolFamily: IPv6(Enabled)          DHCP: Disabled
+IP: 2001::1
+IPMask: ffff::
+DNS: ::
+Gateway: ::
+MAC: 00:01:55:59:EA:9D
+ 
+ 
+-------------------------------------------------------------------------------
+Controller 2 information not accessible
+ 
+administrator@cli> 
+Verify modifing maintenance mode ip address passed
+'result': 'p'
