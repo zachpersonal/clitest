@@ -126,4 +126,4 @@ if __name__ == "__main__":
     start=time.clock()
     c,ssh=ssh_conn()
     BuildVerification(c)
-c.close()
+    c.close()
