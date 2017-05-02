@@ -10,6 +10,8 @@ Pass = "'result': 'p'"
 Fail = "'result': 'f'"
 import string
 
+
+
 def Verifyctrlv(c):
 
     ctrllist = list()
@@ -114,7 +116,7 @@ VAAIsupport: Disabled                   SSDTrimSupport: Enabled
             i += 1
 
         ctrllist.append(ctrl)
-        print ctrllist
+        #print ctrllist
 
     return ctrllist
 
@@ -332,20 +334,103 @@ def verifyCtrlClear(c):
 def verifyCtrlMod(c):
     FailFlag = False
     tolog("verify ctrl -a mod")
-    tolog("verify ctrl -a mod -s <list of settings>")
+    result = SendCmd(c, "ctrl")
+    for index in [4, 5]:
+        row = result.split("\r\n")[index]
+        if row.split()[-2] == "OK":
+            CtrlID = row.split()[0]
+            tolog("verify ctrl -a mod -i " + str(CtrlID) + " -s <list of settings>")
 
-    
+            # verify alias
+            for values in ['test_12', '12_test', 'test 12', '_', '123', 'test']:
+                result = SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"alias = ' + values + '"')
+                result = SendCmd(c, "ctrl -v -i " + str(CtrlID))
+                if "Alias: " + values not in result:
+                    FailFlag = True
+                    tolog("Fail: " + "ctrl -a mod -i " + str(CtrlID) + " -s alias = " + values + '"')
 
+            # verify the values of enable or disable
+            for values in ['disable', 'enable']:
+                option = ["SMART = " + values,
+                          "AdaptiveWBCache = " + values,
+                          "HostCacheFlushing = " + values,
+                          "ForcedReadAhead = " + values,
+                          "SSDTrimSupport = " + values,
+                          # "VAAIsupport = " + values,
+                          "Coercion = " + values,
+                          # to be confirmed
+                          "Coercion = enable"
+                          ]
+                for Op in option:
+                    SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + Op + '"')
+                    result = SendCmd(c, "ctrl -v -i " + str(CtrlID))
+                    if Op.split()[0] + ': ' + Op.split()[-1].capitalize() + 'd' not in result:
+                        FailFlag = True
+                        tolog("Fail: " + "ctrl -a mod -s " + '"' + Op + '"')
+
+            # verify the values of times option -- boundary value testing
+            for option in ["powersavingidletime", "powersavingstandbytime", "powersavingstoppedtime"]:
+                for values in [0, 1, 1439, 1440]:
+                    # print "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"'
+                    result = SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"')
+                    if "Error" in result:
+                        FailFlag = True
+                        tolog("Fail:" + "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"')
+
+            # Failed the test
+            for values in ['123']:
+                option = ["SMART = " + values,
+                          "AdaptiveWBCache = " + values,
+                          "HostCacheFlushing = " + values,
+                          "ForcedReadAhead = " + values,
+                          "SSDTrimSupport = " + values,
+                          # "VAAIsupport = " + values,
+                          "Coercion = " + values,
+                          ]
+                for Op in option:
+                    SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + Op + '"')
+                    result = SendCmd(c, "ctrl -v -i " + str(CtrlID))
+                    if "Error" not in result or "Invalid setting parameters" not in result:
+                        FailFlag = True
+                        tolog("Fail: ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + Op + '"')
+
+            for option in ["powersavingidletime", "powersavingstandbytime", "powersavingstoppedtime"]:
+                for values in [-1, 1441]:
+                    # print "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"'
+                    result = SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"')
+                    if "Error" not in result or "Invalid setting parameters" not in result:
+                        FailFlag = True
+                        tolog("Fail:" + "ctrl -a mod -i " + str(CtrlID) + " -s " + '"' + option + " = " + str(values) + '"')
+
+            for values in ['  ', 'aaaa1aaaa2aaaa3aaaa4aaaa5aaaa6aaaa7aaaa8aaaa9aaaa']:
+                result = SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -s " + '"alias = ' + values + '"')
+                if "Error" not in result:
+                    FailFlag = True
+                    tolog("Fail: " + "ctrl -a mod -i " + str(CtrlID) + " -s alias = " + values + '"')
+
+            result = SendCmd(c, "ctrl -a mod -i " + str(CtrlID) + " -x ")
+            if "Error" not in result or "Invalid option" not in result:
+                FailFlag = True
+                tolog("Fail: ctrl -a mod -i " + str(CtrlID) + " -x ")
+
+            result = SendCmd(c, "ctrl -a mod -i 3 -s " + '"alias = test"')
+            if "Error" not in result or "Invalid setting parameters" not in result:
+                FailFlag =True
+                tolog("Fail: ctrl -a mod -i 3 -s " + '"alias = test"')
+    if FailFlag:
+        tolog(Fail)
+    else:
+        tolog(Pass)
 if __name__ == "__main__":
     start = time.clock()
     c, ssh = ssh_conn()
-    Verifyctrlv(c)
-    # verifyCtrl(c)
-    # verifyCtrlList(c)
-    # verifyCtrlV(c)
-    # verifyCtrlListV(c)
-    # verifyCtrlL(c)
-    # verifyCtrlClear(c)
+    verifyCtrl(c)
+    verifyCtrlList(c)
+    verifyCtrlV(c)
+    verifyCtrlListV(c)
+    verifyCtrlL(c)
+    verifyCtrlMod(c)
+    verifyCtrlClear(c)
     ssh.close()
     elasped = time.clock() - start
     print "Elasped %s" % elasped
