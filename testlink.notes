@@ -1,0 +1,821 @@
+Verify ctrl -a clear -i 1 -t watermark
+ctrl -a clear -i 1 -t watermark
+administrator@cli> 
+Verify ctrl -a clear -i 2 -t watermark
+ctrl -a clear -i 2 -t watermark
+administrator@cli> 
+verify ctrl -a clear -t watermark
+ctrl -a clear -t watermark
+administrator@cli> 
+verify ctrl -a clear -t watermark -i 1
+ctrl -a clear -t watermark -i 1
+administrator@cli> 
+verify ctrl -a clear -t watermark -i 2
+ctrl -a clear -t watermark -i 2
+administrator@cli> 
+Verify ctrl -a clear -i there is no ctrl's ID -t watermark
+ctrl -a clear -i 3 -t watermark
+Error (0x2013): Invalid setting parameters
+-i: invalid setting 3 (1,2)
+administrator@cli> 
+Verify ctrl -a clear -i ctrl's ID
+ctrl -a clear -i 1
+Error (0x403): Missing parameter
+missing parameter '-t' for '-a clear'
+administrator@cli> 
+Verify ctrl -a clear -i ctrl's ID -t abc
+ctrl -a clear -i 2 -t abc
+Error (0x2013): Invalid setting parameters
+-t: invalid setting abc (watermark)
+administrator@cli> 
+Verify ctrl -a clear -x
+ctrl -a clear -x
+Error (0x2012): Invalid option for the command or the action
+invalid option: -x
+administrator@cli> 
+'result': 'p'
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK                   PowerOnTime: 1 hour 17 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 0                     OverallRAIDStatus: OK
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 2
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK                   PowerOnTime: 1 hour 19 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 0                     OverallRAIDStatus: OK
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 2
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ptiflash -a versioninfo
+-------------------------------------------------------------------------------
+Enclosure 1 Running Image Info
+
+===============================================================================
+ImageType   Ctrl   Partition   Version         BuildDate       FlashDate    
+===============================================================================
+Firmware    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+Software    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK                   PowerOnTime: 1 hour 19 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 0                     OverallRAIDStatus: OK
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 2
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ptiflash -a versioninfo
+-------------------------------------------------------------------------------
+Enclosure 1 Running Image Info
+
+===============================================================================
+ImageType   Ctrl   Partition   Version         BuildDate       FlashDate    
+===============================================================================
+Firmware    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+Software    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 21 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 2                     OverallRAIDStatus: OK
+LogDrvPresent: 2                        LogDrvOnline: 2
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 6
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 21 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 3                     OverallRAIDStatus: OK
+LogDrvPresent: 3                        LogDrvOnline: 3
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 9
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 21 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 3                     OverallRAIDStatus: OK
+LogDrvPresent: 3                        LogDrvOnline: 3
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 9
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 25 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 3                     OverallRAIDStatus: OK
+LogDrvPresent: 3                        LogDrvOnline: 3
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 9
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+pool
+===============================================================================
+Id   Name                             OpStatus  TotalCap  UsedCap   FreeCap   
+===============================================================================
+0    10n5Xfk8ovJbABYyJxm1RmelAhEsp70  OK, Synch 498.22 GB 167.94 KB 498.22 GB 
+1    10n5Xfk8ovJbABYyJxm1RmelAhEsp71  OK, Synch 144.96 GB 123.90 KB 144.96 GB 
+2    10n5Xfk8ovJbABYyJxm1RmelAhEsp73  OK, Synch 289.91 GB 258.05 KB 289.91 GB 
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 26 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 3                     OverallRAIDStatus: OK
+LogDrvPresent: 3                        LogDrvOnline: 3
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 9
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+pool
+===============================================================================
+Id   Name                             OpStatus  TotalCap  UsedCap   FreeCap   
+===============================================================================
+0    10n5Xfk8ovJbABYyJxm1RmelAhEsp70  OK, Synch 498.22 GB 167.94 KB 498.22 GB 
+1    10n5Xfk8ovJbABYyJxm1RmelAhEsp71  OK, Synch 144.96 GB 123.90 KB 144.96 GB 
+2    10n5Xfk8ovJbABYyJxm1RmelAhEsp73  OK, Synch 289.91 GB 258.05 KB 289.91 GB 
+administrator@cli> 
+ptiflash -a versioninfo
+-------------------------------------------------------------------------------
+Enclosure 1 Running Image Info
+
+===============================================================================
+ImageType   Ctrl   Partition   Version         BuildDate       FlashDate    
+===============================================================================
+Firmware    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+Software    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+administrator@cli> 
+ctrl -v
+-------------------------------------------------------------------------------
+CtrlId: 1                               Alias: 
+OperationalStatus: Not Present          PowerOnTime: Never
+ControllerRole: Secondary               ReadinessStatus: N/A
+LUNAffinity: Disabled                   LunmappingMethod: Name Based
+CacheUsagePercentage: Unknown           DirtyCachePercentage: Unknown
+PartNo:                                 SerialNo: 
+HWRev:                                  WWN: 0000-0000-0000-0000
+CmdProtocol: N/A                        ALUA: Disabled
+MemType0:        N/A  (Slot 0)          MemSize0:    N/A  (Slot 0)
+MemType1:        N/A  (Slot 1)          MemSize1:    N/A  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: N/A                          FlashSize: 0 Byte
+NVRAMType: N/A                          NVRAMSize: 0 Byte
+BootLoaderVersion: 0.00.0000.00         BootLoaderBuildDate: N/A
+FirmwareVersion: 0.00.0000.00           FirmwareBuildDate: N/A
+SoftwareVersion: 0.00.0000.00           SoftwareBuildDate: N/A
+DiskArrayPresent: 0                     OverallRAIDStatus: Unknown
+LogDrvPresent: 0                        LogDrvOnline: 0
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 0                        PhyDrvOnline: 0
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 0                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 512 Bytes
+PreferredCacheLineSize: 0               CacheLineSize: 0
+Coercion: Disabled                      CoercionMethod: N/A
+SMART: Disabled                         SMARTPollingInterval: 0 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 0
+PollInterval: 0                         AdaptiveWBCache: Disabled
+HostCacheFlushing: Disabled             ForcedReadAhead: Disabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: Never              PowerSavingStandbyTime: Never
+PowerSavingStoppedTime: Never           PseudoDeviceType: DAS
+PerfectRebuildAvailable: 0              VAAIsupport: Disabled
+SSDTrimSupport: Enabled
+-------------------------------------------------------------------------------
+CtrlId: 2                               Alias: test
+OperationalStatus: OK, BGA Running      PowerOnTime: 1 hour 27 minutes
+ControllerRole: Primary                 ReadinessStatus: Active
+LUNAffinity: Enabled                    LunmappingMethod: Name Based
+CacheUsagePercentage: 0                 DirtyCachePercentage: 0
+PartNo: F29000020000177                 SerialNo: MA6D16508700019
+HWRev: B1                               WWN: 2101-0001-555b-b258
+CmdProtocol: SCSI-3                     ALUA: Disabled
+MemType0: DDR4 SDRAM  (Slot 0)          MemSize0:   8 GB  (Slot 0)
+MemType1: DDR4 SDRAM  (Slot 1)          MemSize1:   8 GB  (Slot 1)
+MemType2:        N/A  (Slot 2)          MemSize2:    N/A  (Slot 2)
+MemType3:        N/A  (Slot 3)          MemSize3:    N/A  (Slot 3)
+FlashType: Flash Memory                 FlashSize: 16 GB
+NVRAMType: SRAM                         NVRAMSize: 1 MB
+BootLoaderVersion: 15.26.0000.00        BootLoaderBuildDate: Dec 06, 2016
+FirmwareVersion: 12.00.9999.83          FirmwareBuildDate: Apr 29, 2017
+SoftwareVersion: 12.00.9999.83          SoftwareBuildDate: Apr 29, 2017
+DiskArrayPresent: 3                     OverallRAIDStatus: OK
+LogDrvPresent: 3                        LogDrvOnline: 3
+LogDrvOffline: 0                        LogDrvCritical: 0
+PhyDrvPresent: 10                       PhyDrvOnline: 9
+PhyDrvOffline: 0                        PhyDrvPFA: 0
+GlobalSparePresent: 2                   DedicatedSparePresent: 0
+RevertibleGlobalSparePresent: 0         RevertibleDedicatedSparePresent: 0
+RevertibleGlobalSpareUsed: 0            RevertibleDedicatedSpareUsed: 0
+WriteThroughMode: 0                     MaxSectorSize: 4 KB
+PreferredCacheLineSize: 64              CacheLineSize: 64
+Coercion: Enabled                       CoercionMethod: GBTruncate
+SMART: Enabled                          SMARTPollingInterval: 24 minutes
+MigrationStorage: DDF                   CacheFlushInterval: 1
+PollInterval: 80                        AdaptiveWBCache: Enabled
+HostCacheFlushing: Enabled              ForcedReadAhead: Enabled
+Battery: Enabled                        CommonWorld: Disabled
+Liquid: Disabled                        DriveCmd: Enabled
+PowerSavingIdleTime: 11 hours 22 minutes
+PowerSavingStandbyTime: 11 hours 22 minutes
+PowerSavingStoppedTime: 11 hours 22 minutes
+PseudoDeviceType: CTRL                  PerfectRebuildAvailable: 64
+VAAIsupport: Disabled                   SSDTrimSupport: Enabled
+administrator@cli> 
+ptiflash -a versioninfo
+-------------------------------------------------------------------------------
+Enclosure 1 Running Image Info
+
+===============================================================================
+ImageType   Ctrl   Partition   Version         BuildDate       FlashDate    
+===============================================================================
+Firmware    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+Software    2      2           12.00.9999.83   Apr 29, 2017   May 2, 2017   
+administrator@cli> 
