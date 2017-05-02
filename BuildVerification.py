@@ -36,7 +36,7 @@ def BuildVerification(c):
 
 
 
-    tftpbuildnumber=open("./buildnum","r").readline().rstrip()
+    tftpbuildnumber=open("/home/work/jackyl/Scripts/buildnum","r").readline().rstrip()
     print currentbuild
     print tftpbuildnumber
 
