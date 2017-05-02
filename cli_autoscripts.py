@@ -233,7 +233,7 @@ if __name__ == "__main__":
 
                             buildnamelist = tls.getBuildsForTestPlan(testplan['id'])
                             buildname = buildnamelist[-1]['name']
-                            newbuildnum = open("/home/work/jackyl/Scripts/buildnum", "r").readline().rstrip()
+                            newbuildnum = open("/home/work/jackyl/Scripts/clitest/buildnum", "r").readline().rstrip()
                             # print "newbuildnum is %s, currentbuild is %s" %(newbuildnum,buildname)
 
                             if buildname != newbuildnum:
