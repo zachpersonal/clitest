@@ -109,7 +109,7 @@ def nonBlockingRawInput(prompt='', timeout=5):
 
 if __name__ == "__main__":
 
-    lname=nonBlockingRawInput("Only the test cases assgined to you will be executed, please input your name:",1)
+    lname=nonBlockingRawInput("Only the test cases assgined to you will be executed, please input your name:",25)
 
     jacky = 'bc473e34c21e2fe7161dc8374274744b'
     zach="1e2a6e7af20e5c274174ff68e2ba63a2"
