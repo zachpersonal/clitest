@@ -1,4 +1,3 @@
-
 # initial version
 # March 16, 2017
 # architecture
@@ -36,7 +35,7 @@ def BuildVerification(c):
 
 
 
-    tftpbuildnumber=open("/home/work/jackyl/Scripts/buildnum","r").readline().rstrip()
+    tftpbuildnumber=open("/home/work/jackyl/Scripts/clitest/buildnum","r").readline().rstrip()
     print currentbuild
     print tftpbuildnumber
 
