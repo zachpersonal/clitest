@@ -162,7 +162,7 @@ if __name__ == "__main__":
             #
             #print tls.getFirstLevelTestSuitesForTestProject(project['id'])
 
-            testsuiteID= tls.getFirstLevelTestSuitesForTestProject(project['id'])[-1]['id']
+            testsuiteID= tls.getFirstLevelTestSuitesForTestProject(project['id'])[-2]['id']
             hastestsuite=False
             testsuite=tls.getTestCasesForTestSuite(testsuiteID,True,'full')
 
@@ -401,4 +401,4 @@ if __name__ == "__main__":
                                                 s.sendmail(msg['From'], rec, msg.as_string())
 
 
-ssh.close()
+    ssh.close()
