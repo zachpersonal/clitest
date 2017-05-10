@@ -1477,19 +1477,21 @@ def bvtsparedelete(c):
     spareinfo = SendCmd(c, "spare")
     count=0
     Failflag=False
-    while "spare not found" in spareinfo:
+    # while "spare not found" not in spareinfo:
+    #
+    #     sparenum = int(spareinfo.split("\r\n")[-2].split(" ")[0])
+    #     for i in range(0, sparenum + 1):
+    #         SendCmd(c, "spare -a del -i " + str(i))
+    #         count+=1
+    #
+    #     if count>sparenum+1:
+    #         tolog("Some spare cannot be deleted.")
+    #         Failflag=True
+    #         break
+    #     spareinfo = SendCmd(c, "spare")
 
-        sparenum = int(spareinfo.split("\r\n")[-2].split(" ")[0])
-        for i in range(0, sparenum + 1):
-            SendCmd(c, "spare -a del -i " + str(i))
-            count+=1
-
-        if count>sparenum+1:
-            tolog("Some spare cannot be deleted.")
-            Failflag=True
-            break
-        spareinfo = SendCmd(c, "spare")
-
+    SendCmd(c, "spare -a del -i 0")
+    SendCmd(c, "spare -a del -i 1")
     return Failflag
 
 def bvtpooldel(c):

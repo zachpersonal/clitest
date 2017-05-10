@@ -319,7 +319,7 @@ def verifybbmclear(c):
         tolog('Fail: Verify bbm -a clear')
         tolog(Fail)
     else:
-        tolog('Pass')
+
         tolog(Pass)
 
 if __name__ == "__main__":
